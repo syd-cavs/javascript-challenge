@@ -1,4 +1,9 @@
 // from data.js
 var tableData = data;
+console.log(tableData);
 
-// YOUR CODE HERE!
+var body = d3.select('tbody');
+tableData.forEach(function(ufo) {
+    var row = body.append('tr');
+    Object.entries(ufo).forEach()
+});
