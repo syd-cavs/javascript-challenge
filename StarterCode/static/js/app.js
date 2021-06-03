@@ -17,21 +17,14 @@ function createTable(x){
 };
 
 function runEnter() {
-    
-
     var filteredData = tableData;
     var inputValue = d3.select('#datetime').property('value');
-    
     filteredData = filteredData.filter(date => date.datetime === inputValue);
     console.log(filteredData);
     createTable(filteredData);
 }
 
 d3.select("#filter-btn").on("click", runEnter);
-
 //d3.selectAll("input").on("change", runEnter);
-
-
-
 
 createTable(tableData);
